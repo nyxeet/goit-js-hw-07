@@ -19,8 +19,8 @@ const galleryRef = document.querySelector('#gallery')
 const addLi = elements => {
     elements.forEach(elem => {
         const liRef = document.createElement('li')
-        liRef.classList.add('gallery-item');
         const imageRef = document.createElement('img');
+        liRef.classList.add('gallery-item');
         imageRef.classList.add('gallery-image');
         imageRef.src = elem.url;
         imageRef.alt = elem.alt;
