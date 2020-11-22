@@ -1,5 +1,4 @@
 const inputRef = document.querySelector('input[id="validation-input"]');
-console.log(inputRef);
 
 inputRef.addEventListener('input', clearClasses);
 inputRef.addEventListener('blur', isValidate);
