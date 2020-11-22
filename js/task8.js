@@ -4,7 +4,7 @@ const destroyButton = document.querySelector('button[data-action="destroy"]')
 const inputRef = document.querySelector('#controls input')
 const divBoxes = document.querySelector('#boxes')
 
-// без передачи ивента не работает, спросить у ментора почему
+
 renderButton.addEventListener('click', event => { createBoxes(inputRef.value) })
 destroyButton.addEventListener('click', destroyBoxes);
 
