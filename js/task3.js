@@ -17,7 +17,7 @@ const images = [
 ];
 const galleryRef = document.querySelector('#gallery')
 
-const addLi = function(elements) {
+function addLi(elements) {
   const addList = elements.map(element => {
     const liRef = document.createElement('li')
     const imageRef = document.createElement('img');

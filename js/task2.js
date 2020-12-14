@@ -7,7 +7,7 @@ const ingredients = [
   'Приправы',
 ];
 const listRef = document.querySelector('#ingredients')
-const addLi = function(elements) {
+function addLi(elements) {
   const addList = elements.map(element => {
     const liRef = document.createElement('li')
     liRef.textContent = element;
