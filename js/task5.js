@@ -3,6 +3,7 @@ const nameRef = document.querySelector('span[id="name-output"]')
 
 inputRef.addEventListener('input', handleInputChange);
 
-function handleInputChange(event) {
-    event.target.value ? nameRef.textContent = event.target.value : nameRef.textContent = 'незнакомец'
+function handleInputChange({ target }) {
+    const { value } = target;
+    value ? nameRef.textContent = value : nameRef.textContent = 'незнакомец'
 }

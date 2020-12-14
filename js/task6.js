@@ -8,14 +8,13 @@ function clearClasses(event) {
         inputRef.classList.remove('valid', 'invalid');
     }
 }
-function isValidate(event) {
+function isValidate({ target }) {
     const inputAttribute = inputRef.getAttribute('data-length');
+    const { value } = target;
 
-    if (event.target.value.length == inputAttribute) {
+    if (value.length == inputAttribute) {
         inputRef.classList.add('valid')
         inputRef.classList.remove('invalid');
-    } else if (event.target.value.length == 0) {
-        inputRef.classList.remove('valid', 'invalid');
     } else {
         inputRef.classList.add('invalid')
         inputRef.classList.remove('valid');

@@ -16,16 +16,18 @@ const images = [
   },
 ];
 const galleryRef = document.querySelector('#gallery')
-const addLi = elements => {
-    elements.forEach(elem => {
-        const liRef = document.createElement('li')
-        const imageRef = document.createElement('img');
-        liRef.classList.add('gallery-item');
-        imageRef.classList.add('gallery-image');
-        imageRef.src = elem.url;
-        imageRef.alt = elem.alt;
-        liRef.append(imageRef);
-        galleryRef.append(liRef);
-    })
+
+const addLi = function(elements) {
+  const addList = elements.map(element => {
+    const liRef = document.createElement('li')
+    const imageRef = document.createElement('img');
+    liRef.classList.add('gallery-item');
+    imageRef.classList.add('gallery-image');
+    imageRef.src = element.url;
+    imageRef.alt = element.alt;
+    liRef.append(imageRef);  
+    return liRef;
+  })
+  galleryRef.append(...addList);
 }
-addLi(images);
+addLi(images)
